@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+header {
+    background-color: #014E56;
+}
+
+ul {
+    list-style: none;   
+}
+
+a {
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #014E56;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 77px 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;    
+    align-items: center;
+    column-gap: 40px;
+    transition: 0.6s;
+}
+
+.navbar-shrink {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#navbar-responsive {
+    transition: 0.8s;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-items {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-item a{
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.nav-item a:hover {
+    color: #F67E7E;
+}
+
+.nav-right .contact {
+    padding: 9px 32px;
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+    color: #FFFFFF;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-right .contact:hover {
+    color: #002529;
+    background-color: #FFFFFF;
+}
+
+.hamburger {
+    margin-top: -3px;
+    display: none;
+    text-align: end;
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger img{
+    width: 32px;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+}
+
+.close img{
+    width: 32px;
+}
+
+@media (max-width: 700px){
+    #navbar-responsive {
+        background: url(../../images/home/navbar-responsive.png) no-repeat 100% 100%;
+        background-color: #2C6269;
+        opacity: 1 !important;
+    }
+
+    .nav-right {
+        position: fixed;
+        top: 0; 
+        right: -100%;
+        bottom: 0;
+        height: 100%;
+        width: 65%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-items {
+        margin-top: -250px;
+        margin-left: -100px;
+        margin-bottom: 36px;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .hamburger, .close {
+        display: block;
+    }
+}

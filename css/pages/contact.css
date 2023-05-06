@@ -1,0 +1,140 @@
+@import "../global.css";
+
+#contact {
+    padding-top: 240px;
+    padding-bottom: 110px;
+    background: url(../../images/contact/top-left.png) no-repeat 0 40%,
+    url(../../images/contact/bottom-right.png) no-repeat 100% 100%;
+    background-color: #014E56;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-left h1 {
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100px;
+    color: #FFFFFF;
+}
+
+.contact-left h2 {
+    margin-bottom: 32px;
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #F67E7E;
+}
+
+.option__title p {
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-bottom: 8px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    display: block;
+    margin-bottom: 24px;
+    width: 540px;
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.contact-right input {
+    padding: 16px 0;
+}
+
+.contact-right textarea {
+    height: 58px;
+    resize: none;
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.115385px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+.contact-right button {
+    padding: 10px 32px;
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #004047;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+}
+
+@media (max-width: 1000px){
+    #contact {
+        background-image: none;
+        background: url(../../images/contact/top-left.png) no-repeat 0 25%,
+        url(../../images/contact/bottom-right.png) no-repeat 100% 100%;
+        background-color: #014E56;
+    }
+    
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .contact-options {
+        margin-left: -90px;
+        margin-bottom: 64px;
+    }
+}
+
+@media (max-width: 600px){
+    #contact {
+        background-image: none;
+        background: url(../../images/contact/bottom-right.png) no-repeat 100% 110%;
+        background-color: #014E56;
+    }
+
+    .contact-options {
+        margin-left: 0;
+    }
+
+    .contact-right{
+        width: 100%;
+    }
+
+    .contact-right input,
+    .contact-right textarea{
+        width: 100%;
+    }
+}
